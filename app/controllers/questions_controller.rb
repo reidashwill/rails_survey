@@ -9,6 +9,7 @@ class QuestionsController < ApplicationController
   def create
     @survey = Survey.find(params[:survey_id])
     @question = @survey.questions.new(question_params)
+    
     if @question.save
       redirect_to survey_path(@survey)
     else 
@@ -48,8 +49,3 @@ class QuestionsController < ApplicationController
       params.require(:question).permit(:question, :a, :b, :c, :answer)
     end
 end
-
-
-# def answers 
-#   answer
-# end 

@@ -3,5 +3,15 @@
 <%= form_for [@survey, @question] do |f| %>
   <%= f.label :question %>
   <%= f.text_field :question %>
+  <hr>
+  <%= f.label :answer_a %>
+  <%= f.text_field :a %>
+  <br>
+  <%= f.label :answer_b %>
+  <%= f.text_field :b %>
+  <br>
+  <%= f.label :answer_c %>
+  <%= f.text_field :c %>
+  <hr>
   <%= f.submit %>
 <% end %>
