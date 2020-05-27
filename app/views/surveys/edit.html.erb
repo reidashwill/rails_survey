@@ -1,0 +1,5 @@
+<h3> Edit Survey Name </h3>
+<%= render "layouts/survey_form" %>
+
+<p><%= link_to "add question", new_survey_question_path(@survey) %></p>
+<p><%= link_to "Return to All Surveys", survey_path(@survey)%></p>
