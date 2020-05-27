@@ -9,6 +9,15 @@
       <li>
         <%= link_to question.question, survey_question_path(@survey, question) %>
       </li>
+      Select An Answer: 
+      <br>
+      <%= radio_button('post', 'question.answer','question.a' ) %> <%= question.a %>
+      <br>
+      <%= radio_button_tag 'question.b', question.b, @answer == question.b %> <%= question.b %>
+      <br>
+      <%= radio_button_tag 'question.c', question.c, @answer == question.c %> <%= question.c %>
+      <br>
+      <br>
    </ol>
   <% end %>
 <% end %>
